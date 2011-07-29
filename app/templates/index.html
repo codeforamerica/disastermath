@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/formalize.css">
+<style type="text/css">
+  #chart{
+    margin: 0 auto;
+    position: relative;
+    width: 950px;
+  }
+  svg{
+    width: 100%
+  }
+</style>
+{% endblock %}
+
+
+{% block js %}
+<!--JavaScript for map-->
+<script src="/static/js/libs/d3.js"></script>
+<script src="/static/js/libs/d3.geo.js"></script>
+<script src="/static/js/disastermath.js"></script>
+{% endblock %}
+
+
+{% block main %}
+<div id="chart"></div>
+{% endblock %}

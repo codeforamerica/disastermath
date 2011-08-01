@@ -1,21 +1,34 @@
-/*
-*
-* World Map JavaScript for disastermath.
-*
-*/
+(function($){
 
-var data = {};
+  // Initial function. Get SVG element.
 
-var path = d3.geo.path();
+  var html = $('html.svg'),
+      chart = $('#chart'),
+      svgPath = '/static/world_map.svg';
 
-var svg = d3.select('#chart').append('svg:svg');
+  if (html) {
+    // Grab the SVG, put it into the chart div.
+    $.get(svgPath, function(data){
+      var svg = data.getElementsByTagName('svg')[0];
+      chart.html(svg);
+    });
 
-var countries = svg.append('svg:g').attr('id', 'countries');
+  } else {
+    // We're dealing with an older browser.
+  }
 
-d3.json('/static/js/world_countries.js', function(json){
-  console.log(json);
-  countries.selectAll('g')
-           .data(json.features)
-           .enter().append('svg:path')
-           .attr('d', path);
-});
+
+  // Now on to highlighting on hover.
+
+  var color = '#db7019';
+
+  $('path').live({
+      mouseover: function(e) {
+        $(this).css('fill', color);
+      },
+      mouseout: function(e) {
+        $(this).css('fill', '');
+      }
+  });
+
+})(jQuery);

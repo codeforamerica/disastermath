@@ -24,7 +24,7 @@ header{
         border-bottom:1px solid #eee;
         margin:0 auto;
         padding:10px 0;
-        width:80%;
+        width:90%;
     }
     li{
         float: right;
@@ -95,4 +95,25 @@ header{
 }
 .flask_cloud:hover{
     background: url('/static/img/flaskcloud_hover.png') no-repeat center center;
+}
+
+/* iPad [portrait + landscape] */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+}
+
+/* iPad [portrait only] */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  body{ zoom: 75%; }
+}
+
+/* iPad [landscape only] */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+and (orientation: landscape) {
+  body{ zoom: 95%; }
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-device-width: 480px) {
+
 }

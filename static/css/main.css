@@ -4,7 +4,7 @@ a:hover{text-decoration:underline;}
 ::selection{background:#db7019;color:#fff;text-shadow:none;}
 ul{list-style:none;}
 body{color:#444;}
-header{display:block;margin-bottom:100px;}header ul{border-bottom:1px solid #eee;margin:0 auto;padding:10px 0;width:80%;}
+header{display:block;margin-bottom:100px;}header ul{border-bottom:1px solid #eee;margin:0 auto;padding:10px 0;width:90%;}
 header li{float:right;padding-top:24px;}
 header li.float_left{float:left;padding-top:10px;}header li.float_left a{background:url('/static/img/disastermath.png') no-repeat center center;height:33px;width:235px;}
 header a{display:block;font-size:16px;padding:10px 12px;width:75px;text-align:center;text-decoration:none;}
@@ -16,3 +16,5 @@ header a:hover{background:#db7019;color:white;text-decoration:none;-moz-border-r
 .right{background:url('/static/img/company.png') no-repeat center center;min-height:300px;float:right;width:40%;}
 .flask_cloud{background:url('/static/img/flaskcloud.png') no-repeat center center;display:block;height:300px;margin:0 auto;width:460px;}
 .flask_cloud:hover{background:url('/static/img/flaskcloud_hover.png') no-repeat center center;}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){}@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait){body{zoom:75%;}}@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+and (orientation: landscape){body{zoom:95%;}}@media only screen and (max-device-width: 480px){}

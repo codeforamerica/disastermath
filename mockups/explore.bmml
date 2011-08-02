@@ -1,0 +1,143 @@
+<mockup version="1.0" skin="sketch" measuredW="1395" measuredH="962" mockupW="1341" mockupH="939">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="54" y="23" w="954" h="939" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Disaster%20Math%0Ahttp%3A//disastermath.com/explore/</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="137" y="108" w="186" h="35" measuredW="168" measuredH="41" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <size>28</size>
+        <text>disastermath</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::HRule" x="137" y="161" w="792" h="-1" measuredW="100" measuredH="5" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.25</backgroundAlpha>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::LinkBar" x="798" y="113" w="-1" h="-1" measuredW="131" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Explore%2C%20About</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::VRule" x="528" y="251" w="-1" h="175" measuredW="5" measuredH="100" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.25</backgroundAlpha>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::StickyNote" x="1178" y="274" w="217" h="167" measuredW="109" measuredH="123" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Disaster%20Types%20should%20be%20%22grayed%20out%22%20if%20they%20did%20not%20occur%20during%20that%20specific%20year.</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::List" x="656" y="210" w="232" h="259" measuredW="100" measuredH="252" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <rowHeight>42</rowHeight>
+        <size>20</size>
+        <text>Disaster%20One%0ADisaster%20Two%0ADisaster%20Three%0ADisaster%20Four%0ADisaster%20Five%0ADisaster%20Six</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="__group__" x="173" y="210" w="251" h="259" measuredW="251" measuredH="259" zOrder="5" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::SubTitle" x="0" y="0" w="-1" h="-1" measuredW="45" measuredH="27" zOrder="0" locked="false" isInGroup="35">
+          <controlProperties>
+            <size>16</size>
+            <text>YEAR</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::SubTitle" x="0" y="92" w="-1" h="-1" measuredW="66" measuredH="24" zOrder="1" locked="false" isInGroup="35">
+          <controlProperties>
+            <size>14</size>
+            <text>COUNTRY</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::SubTitle" x="0" y="192" w="233" h="-1" measuredW="105" measuredH="24" zOrder="2" locked="false" isInGroup="35">
+          <controlProperties>
+            <size>14</size>
+            <text>DISASTER%20TYPE</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::ComboBox" x="0" y="127" w="251" h="-1" measuredW="98" measuredH="32" zOrder="3" locked="false" isInGroup="35">
+          <controlProperties>
+            <size>20</size>
+            <text>Canada</text>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::ComboBox" x="0" y="35" w="149" h="-1" measuredW="78" measuredH="32" zOrder="4" locked="false" isInGroup="35">
+          <controlProperties>
+            <size>20</size>
+            <text>2002</text>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::ComboBox" x="0" y="227" w="248" h="-1" measuredW="99" measuredH="32" zOrder="5" locked="false" isInGroup="35">
+          <controlProperties>
+            <size>20</size>
+            <text>Volcano</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::StickyNote" x="1075" y="77" w="234" h="133" measuredW="109" measuredH="123" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Country%20selectbox%20should%20be%20able%20to%20be%20typed%20into%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="__group__" x="317" y="562" w="427" h="150" measuredW="427" measuredH="150" zOrder="9" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="0" y="0" w="427" h="95" measuredW="200" measuredH="140" zOrder="0" locked="false" isInGroup="40">
+          <controlProperties>
+            <size>28</size>
+            <text>I%20would%20like%20to%20know%20more%20about%20the</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::ComboBox" x="57" y="38" w="-1" h="-1" measuredW="201" measuredH="112" zOrder="1" locked="false" isInGroup="40">
+          <controlProperties>
+            <size>24</size>
+            <text>total%20casualties%0Athose%20affected%0Amonetary%20loss</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="263" y="38" w="30" h="38" measuredW="13" measuredH="38" zOrder="2" locked="false" isInGroup="40">
+          <controlProperties>
+            <size>24</size>
+            <text>.</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Paragraph" x="137" y="779" w="391" h="117" measuredW="200" measuredH="140" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>XXXXX%09%09XXXXXX%09%09XXXXX%09%09XXXXXX%0AXXXXX%09%09XXXXXX%09%09XXXXX%09%09XXXXXX%0AXXXXX%09%09XXXXXX%09%09XXXXX%09%09XXXXXX%0AXXXXX%09%09XXXXXX%09%09XXXXX%09%09XXXXXX%0AXXXXX%09%09XXXXXX%09%09XXXXX%09%09XXXXXX</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="__group__" x="673" y="764" w="131" h="122" measuredW="131" measuredH="122" zOrder="11" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::SubTitle" x="0" y="0" w="129" h="-1" measuredW="115" measuredH="98" zOrder="0" locked="false" isInGroup="47">
+          <controlProperties>
+            <size>72</size>
+            <text>100</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::SubTitle" x="0" y="98" w="131" h="-1" measuredW="131" measuredH="24" zOrder="1" locked="false" isInGroup="47">
+          <controlProperties>
+            <size>14</size>
+            <text>TOTAL%20CASUALTIES</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Tooltip" x="652" y="612" w="172" h="82" measuredW="304" measuredH="82" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <text>Think%20of%20this%20as%20a%20choreographed%20discovery.</text>
+        <tooltipDirection>NW</tooltipDirection>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

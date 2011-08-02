@@ -1,0 +1,71 @@
+<mockup version="1.0" skin="sketch" measuredW="1008" measuredH="962" mockupW="954" mockupH="939">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="54" y="23" w="954" h="939" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Disaster%20Math%0Ahttp%3A//disastermath.com/</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="137" y="108" w="186" h="35" measuredW="167" measuredH="42" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <size>28</size>
+        <text>disastermath</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::HRule" x="137" y="161" w="792" h="-1" measuredW="100" measuredH="5" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.25</backgroundAlpha>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::LinkBar" x="798" y="113" w="-1" h="-1" measuredW="124" measuredH="26" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Explore%2C%20About</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::HSlider" x="270" y="238" w="556" h="-1" measuredW="33" measuredH="11" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <value>9</value>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Image" x="137" y="354" w="467" h="376" measuredW="77" measuredH="79" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Map</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::List" x="729" y="407" w="200" h="270" measuredW="100" measuredH="240" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <rowHeight>48</rowHeight>
+        <size>24</size>
+        <text>Country%20One%0ACountry%20Two%0ACountry%20Three%0ACountry%20Four%0ACountry%20Five</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Button" x="167" y="224" w="-1" h="-1" measuredW="56" measuredH="41" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>RightTriangleIcon%7Cmedium</icon>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Tooltip" x="645" y="143" w="196" h="74" measuredW="257" measuredH="33.1" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <size>16</size>
+        <text>Feel%20free%20to%20explore%20our%20data.</text>
+        <tooltipDirection>NE</tooltipDirection>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Label" x="465" y="886" w="-1" h="-1" measuredW="63" measuredH="29" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>%A9%202011</text>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Image" x="566" y="872" w="65" h="56" measuredW="77" measuredH="79" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Code</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

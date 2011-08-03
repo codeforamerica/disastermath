@@ -14,15 +14,17 @@
       // having an inline SVG element, we're creating an iframe since
       // that works with mobile Safari.
       $.get(svgPath, function(data){
-        var iframe = $(document.createElement('iframe'));
+        var iframe = $(document.createElement('iframe')),
+            width = Math.floor($('#chart').width());
         iframe.attr({
           frameborder: 0,
           height: '310px',
           id: 'iframe',
           src: svgPath,
-          width: '700px'
-        })
+          width: width + 'px'
+        });
         chart.html(iframe);
+        iframe.load(ns.interactive.highlightOnHover);
       });
 
     } else {
@@ -37,13 +39,13 @@
     var idName = element.id,
         className = element.className.baseVal,
         parentName = element.parentElement.className.baseVal,
-        ancestorName = element.parentElement.parentElement.className.baseVal,
-        matchedName;
+        ancestor = element.parentElement.parentElement,
+        ancestorName;
 
     // We'll first check the ID name.
-    if (idName && idName.length == 2) {
-      console.log(idName);
-      return '#' + idName;
+    if (idName && idName.length <= 3) {
+      // Then we found our culprit.
+      return idName;
     }
 
     // ID name doesn't match, so we'll check the class name.
@@ -51,13 +53,14 @@
       matchedName = countrySelector(className);
     } else if (parentName) {
       matchedName = countrySelector(parentName);
-    } else {
-      // This might only apply to Greenland.
+    } else if (ancestor) {
+      // This only applies to multi-island countries.
+      ancestorName = ancestor.className.baseVal;
       matchedName = countrySelector(ancestorName);
     }
 
-    // Since it was a class name, add a period to the front of it.
-    return '.' + matchedName[0];
+    // We found the name through its class.
+    return matchedName[0];
   }
 
   function countrySelector(str) {
@@ -65,28 +68,90 @@
     return str.match(re);
   }
 
+
+  // Namespace for interactive events.
+  ns.interactive = {};
+
+  ns.interactive.highlightOnHover = function(){
+    var iframe = $(this.contentDocument),
+        svg = iframe.children('svg');
+
+    // Let's make the iframe easily accessible.
+    window._iframe = iframe;
+    console.log(svg);
+
+    svg.find('path').toggle(ns.interactive.svgActivate,
+                            ns.interactive.svgDeactivate);
+  }
+
+  ns.interactive.svgActivate = function(e) {
+    // Functionality for the first click on an SVG element.
+    var name = findCountryName(this),
+        iframe = window._iframe,
+        color = '#db7019',
+        element;
+    console.log(name);
+    element = $(iframe[0].getElementById(name));
+    element.css('fill', color)
+           .find('*').css('fill', color);
+  }
+
+  ns.interactive.svgDeactivate = function(e) {
+    // Functionality for the second click on an SVG element.
+    // This should toggle off the colors.
+    var name = findCountryName(this),
+        iframe = window._iframe,
+        element;
+    element = $(iframe[0].getElementById(name));
+    element.css('fill', '')
+           .find('*').css('fill', '');
+  }
+
+  ns.interactive.playButton = function(){
+    // Set up play button functionality.
+    var button = $('.play');
+    button.click(function(e){
+      var self = $(this),
+          stopped = self.data('stopped');
+
+      e.preventDefault();
+
+      if (stopped) {
+        self.css('background-image', "url('/static/img/play_button.png')")
+            .data('stopped', false);
+      } else {
+        self.css('background-image', "url('/static/img/pause_button.png')")
+            .data('stopped', true);
+      }
+
+    });
+  }
+
+  ns.interactive.timeline = function(){
+    var timeline = $('.timeline');
+    timeline.slider({
+      min: 2001,
+      max: 2010,
+      range: 'max',
+      value: 1
+    });
+  }
+
+  ns.interactive.init = function(){
+    // Function to tie together all interactive functions that need
+    // to take place once jQuery is loaded.
+    var interactive = ns.interactive;
+
+    interactive.playButton();
+    interactive.timeline();
+  }
+
+
   ns.main = function(){
     // Main function -- fires on load (like Python main functions).
     ns.init();
-
-    // Now on to highlighting on hover.
-    var color = '#db7019',
-        iframe = document.getElementById('iframe').contentDocument,
-        svg = $(iframe).children('svg');
-
-    svg.find('path').bind({
-        mouseover: function(e) {
-          var name = findCountryName(this);
-          $(name).css('fill', color)
-                 .find('*').css('fill', color);
-        },
-        mouseout: function(e) {
-          var name = findCountryName(this);
-          $(name).css('fill', '')
-                 .find('*').css('fill', '');
-        }
-    });
-  };
+    ns.interactive.init();
+  }
 
   // Call the main function...
   ns.main();

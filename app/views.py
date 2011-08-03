@@ -5,7 +5,8 @@ This file is used for both the routing and logic of your
 application.
 """
 
-from flask import Module, render_template, redirect, url_for
+from flask import Module, render_template, request
+from forms import ExploreDataForm
 
 views = Module(__name__, 'views')
 
@@ -25,15 +26,26 @@ def about():
 @views.route('/explore/')
 def explore():
     """Explore the different countries and disasters available."""
-    return render_template('base.html')
+    form = ExploreDataForm()
+    return render_template('explore.html', form=form)
+
+
+@views.route('/explore/data')
+def explore_data():
+    """This function returns JSON data from GET requests for data."""
+    year = request.args['year']
+    country = request.args['country']
+    disaster_type = request.args['disaster_type']
+    return "ohai"
 
 
 # The functions below should be applicable to all Flask apps.
 
-@views.route('/humans.txt')
-def humans_dot_txt():
-    """Send your static `humans.txt` file."""
-    return views.send_static_file('humans.txt')
+@views.route('/<file_name>.txt')
+def send_text_file(file_name):
+    """Send your static text file."""
+    file_dot_text = file_name + '.txt'
+    return views.send_static_file(file_dot_text)
 
 
 @views.route('/qunit/')

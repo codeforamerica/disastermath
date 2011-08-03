@@ -1,6 +1,9 @@
 #main{margin:0 auto;width:90%;}
+h1{font-size:20px;font-weight:normal;margin:0 0 15px 14%;text-align:center;}
 .controls{height:64px;margin:0 auto 75px;width:75%;}.controls .play{background:url('/static/img/play_button.png') no-repeat left center;display:block;float:left;height:64px;width:14%;}
 .controls .timeline{float:right;margin:24px auto 0;width:85%;}
 #chart{float:left;width:60%;}
-.countries{background:#db7019;float:right;height:300px;width:30%;}
+.countries{float:right;height:300px;width:30%;}.countries li{height:20px;padding:5px 0;width:100%;}
+.countries li.odd{background:#ddd;}
+h2{font-size:16px;font-weight:normal;text-align:center;padding:0 0 10px;text-transform:uppercase;}
 iframe{width:100%;}

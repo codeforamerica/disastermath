@@ -1,15 +1,8 @@
 {% extends "base.html" %}
 
 {% block css %}
-<link rel="stylesheet" href="/static/css/formalize.css">
-<style type="text/css">
-  #chart{
-    width: 60%;
-  }
-  iframe{
-    width: 100%;
-  }
-</style>
+<link rel="stylesheet" href="/static/css/index.css">
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/smoothness/jquery-ui.css">
 {% endblock %}
 
 
@@ -20,5 +13,13 @@
 
 
 {% block main %}
-<div id="chart"></div>
+<div class="controls">
+  <a href="#" class="play clearfix"></a>
+  <div class="timeline"></div>
+</div>
+<div class="clearfix visualization">
+  <div id="chart"></div>
+  <ul class="countries">
+  </ul>
+</div>
 {% endblock %}

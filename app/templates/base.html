@@ -11,8 +11,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Since I develop in the 1000px range, that's what the width should be-->
+  <meta name="viewport" content="width=1000">
 
 
   <!-- CSS: implied media="all" -->
@@ -40,6 +40,9 @@
         <li>
             <a href="{{ url_for('views.about') }}">About</a>
         </li>
+        <li>
+            <a href="{{ url_for('views.explore') }}">Explore</a>
+        </li>
     </ul>
     </header>
     <div id="main" role="main">
@@ -55,6 +58,7 @@
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/static/js/libs/jquery-1.6.2.min.js">\x3C/script>')</script>
+  <script type="text/javascript" src="/static/js/jquery-ui-1.8.14.custom.min.js"></script>
 
   {% block js %}{% endblock %}
 

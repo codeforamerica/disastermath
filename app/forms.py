@@ -14,3 +14,11 @@ class ExampleForm(Form):
     email = TextField('Email', validators=[Email()])
     location = TextField('Location')
     submit = SubmitField('Submit')
+
+
+class ExploreDataForm(Form):
+    """A form for requesting data to explore disasters in countries."""
+    year = TextField('Year')
+    country = TextField('Country')
+    disaster_type = TextField('Disaster Type')
+    pass

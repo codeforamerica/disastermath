@@ -4,37 +4,41 @@
   var ns = {};
 
   ns.init = function(){
-    // Initial function. Get SVG element.
+    // Initial function. Get request for the SVG element.
     var html = $('html.svg'),
-        chart = $('#chart'),
         svgPath = '/static/world_map.svg';
 
     if (html) {
-      // Create the iframe with a source to our SVG file. Rather than
-      // having an inline SVG element, we're creating an iframe since
-      // that works with mobile Safari.
-      $.get(svgPath, function(data){
-        var iframe = $(document.createElement('iframe')),
-            width = Math.floor($('#chart').width());
-        iframe.attr({
-          frameborder: 0,
-          height: '310px',
-          id: 'iframe',
-          src: svgPath,
-          width: width + 'px'
-        });
-        chart.html(iframe);
-        iframe.load(ns.interactive.highlightOnHover);
-      });
-
+      // Get request for the SVG file.
+      $.get(svgPath, ns.getSVG);
     } else {
       // We're dealing with an older browser, and therefore need to use
       // some sort of static images.
     }
   }
 
+  ns.getSVG = function(data){
+    // Create the iframe with a source to our SVG file.
+    var iframe = $(document.createElement('iframe')),
+        chart = $('#chart'),
+        width = Math.floor($('#chart').width()),
+        svgPath = '/static/world_map.svg';
 
-  function findCountryName(element) {
+    iframe.attr({
+      frameborder: 0,
+      height: '310px',
+      id: 'iframe',
+      src: svgPath,
+      width: width + 'px'
+    });
+    chart.html(iframe);
+    iframe.load(ns.interactive.highlightOnHover);
+  }
+
+  // Namespace for country events and functions.
+  ns.country = {};
+
+  ns.country.findName = function(element) {
     // Find a usable country name.
     var idName = element.id,
         className = element.className.baseVal,
@@ -50,20 +54,20 @@
 
     // ID name doesn't match, so we'll check the class name.
     if (className) {
-      matchedName = countrySelector(className);
+      matchedName = ns.country.selector(className);
     } else if (parentName) {
-      matchedName = countrySelector(parentName);
+      matchedName = ns.country.selector(parentName);
     } else if (ancestor) {
       // This only applies to multi-island countries.
       ancestorName = ancestor.className.baseVal;
-      matchedName = countrySelector(ancestorName);
+      matchedName = ns.country.selector(ancestorName);
     }
 
     // We found the name through its class.
     return matchedName[0];
   }
 
-  function countrySelector(str) {
+  ns.country.selector = function(str) {
     var re = /\b\w{2,3}\b/;
     return str.match(re);
   }
@@ -86,7 +90,7 @@
 
   ns.interactive.svgActivate = function(e) {
     // Functionality for the first click on an SVG element.
-    var name = findCountryName(this),
+    var name = ns.country.findName(this),
         iframe = window._iframe,
         color = '#db7019',
         element;
@@ -99,7 +103,7 @@
   ns.interactive.svgDeactivate = function(e) {
     // Functionality for the second click on an SVG element.
     // This should toggle off the colors.
-    var name = findCountryName(this),
+    var name = ns.country.findName(this),
         iframe = window._iframe,
         element;
     element = $(iframe[0].getElementById(name));
@@ -110,21 +114,31 @@
   ns.interactive.playButton = function(){
     // Set up play button functionality.
     var button = $('.play');
-    button.click(function(e){
-      var self = $(this),
-          stopped = self.data('stopped');
+    button.data('stopped', true);
+    button.click(ns.interactive.clickButton);
+  }
 
-      e.preventDefault();
+  ns.interactive.clickButton = function(e){
+    // Actual functionality for the play button.
+    var button = $(this),
+        stopped = button.data('stopped');
 
-      if (stopped) {
-        self.css('background-image', "url('/static/img/play_button.png')")
-            .data('stopped', false);
-      } else {
-        self.css('background-image', "url('/static/img/pause_button.png')")
+    // No need to change the URL.
+    e.preventDefault();
+
+    if (!stopped) {
+      button.css('background-image', "url('/static/img/play_button.png')")
             .data('stopped', true);
+      if (ns._interval) {
+        // Clear out the interval that is currently happening.
+        clearInterval(ns._interval);
       }
-
-    });
+    } else {
+      button.css('background-image', "url('/static/img/pause_button.png')")
+            .data('stopped', false);
+      // Make the interval available to be cleared.
+      ns._interval = setInterval(ns.interactive.incrementTimeline, 800);
+    }
   }
 
   ns.interactive.timeline = function(){
@@ -135,6 +149,28 @@
       range: 'max',
       value: 1
     });
+  }
+
+  ns.interactive.incrementTimeline = function(){
+    // Function meant to be put into a setInterval call.
+    var timeline = $('.timeline'),
+        year = timeline.slider('value'),
+        max = timeline.slider('option', 'max'),
+        button = $('.play'),
+        stopped = button.data('stopped');
+
+    // If the timeline is meant to be playing and the current
+    // timeline value is less than the maxium year...
+    if (!stopped && year < max) {
+      var nextYear = year + 1;
+      timeline.slider('value', nextYear);
+    } else {
+      // Then the button should be paused.
+      button.click();
+    }
+
+    // Let's keep track of the interval calls...
+    console.log('ohai interval');
   }
 
   ns.interactive.init = function(){
@@ -155,5 +191,8 @@
 
   // Call the main function...
   ns.main();
+
+  // And make the namespace visible to the outside world.
+  window.ns = ns;
 
 })(document, jQuery);

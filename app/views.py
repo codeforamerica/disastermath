@@ -22,6 +22,12 @@ def about():
     return render_template('about.html')
 
 
+@views.route('/explore/')
+def explore():
+    """Explore the different countries and disasters available."""
+    return render_template('base.html')
+
+
 # The functions below should be applicable to all Flask apps.
 
 @views.route('/humans.txt')

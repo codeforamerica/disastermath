@@ -1,4 +1,5 @@
-[{country:"Russia",Region:"Eastern Europe",Deaths:55736,Affected:null,Damages:400,"Year":2010,Development:4,Severity:92},
+var data = [
+{country:"Russia",Region:"Eastern Europe",Deaths:55736,Affected:null,Damages:400,"Year":2010,Development:4,Severity:92},
 {country:"Belgium",Region:"Western Europe",Deaths:940,Affected:null,Damages:null,"Year":2006,Development:5,Severity:61},
 {country:"Austria",Region:"Western Europe",Deaths:345,Affected:null,Damages:280,"Year":2003,Development:5,Severity:62},
 {country:"Slovenia",Region:"Eastern Europe",Deaths:289,Affected:null,Damages:80,"Year":2003,Development:5,Severity:62},

@@ -29,16 +29,17 @@ def research():
     return render_template('research.html')
 
 
+@views.route('/research/methodology/')
+def methodology():
+    """Overview of methodology used."""
+    return render_template('methodology.html')
+
+
 @views.route('/data/')
 def data():
     """Find which dataset you want to download."""
     return render_template('data.html')
 
-
-@views.route('/methodology/')
-def methodology():
-    """Overview of methodology used."""
-    return render_template('methodology.html')
 
 # The functions below should be applicable to all Flask apps.
 

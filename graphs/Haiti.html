@@ -22,7 +22,7 @@
 var w = 600,
     h = 400,
     x = pv.Scale.linear(0, 5).range(0, w),
-    y = pv.Scale.linear(4, 9).range(0, h),
+    y = pv.Scale.linear(6, 10).range(0, h),
     c = pv.Scale.log(1, 2000).range("orange", "brown");
  
 /* The root panel. */
@@ -54,16 +54,6 @@ vis.add(pv.Rule)
  
 /* The dot plot! */
 vis.add(pv.Panel)
-    .data(data)
-  .add(pv.Dot)
-    .left(function(d) (x(d.Development)))
-    .bottom(function(d) (y(d.Severity)))
-    .strokeStyle(function(d) c(d.Deaths))
-    .fillStyle(function() this.strokeStyle().alpha(.2))
-    .size(function(d) Math.sqrt(d.Deaths)*2)
-    .title(function(d) "country" + d.country + " " + d.Deaths + " Deaths");
-
-vis.add(pv.Panel)
  .data(data)
   .add(pv.Dot)
     .left(function(d) (x(d.Development)))
@@ -73,7 +63,16 @@ vis.add(pv.Panel)
     .size(function(d) Math.sqrt(d.Affected)*2)
     .title(function(d) d.country + " " + d.Affected + " People Affected");
 
- 
+vis.add(pv.Panel)
+    .data(data)
+  .add(pv.Dot)
+    .left(function(d) (x(d.Development)))
+    .bottom(function(d) (y(d.Severity)))
+    .strokeStyle(function(d) c(d.Deaths))
+    .fillStyle(function() this.strokeStyle().alpha(.2))
+    .size(function(d) Math.sqrt(d.Deaths)*2)
+    .title(function(d) "country" + d.country + " " + d.Deaths + " Deaths");
+
 vis.render();
  
     </script> 

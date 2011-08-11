@@ -1,27 +1,74 @@
-<mockup version="1.0" skin="sketch" measuredW="1008" measuredH="962" mockupW="954" mockupH="939">
+<mockup version="1.0" skin="sketch" measuredW="1008" measuredH="1350" mockupW="954" mockupH="1327">
   <controls>
-    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="54" y="23" w="954" h="939" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="54" y="23" w="954" h="1327" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Disaster%20Math%0Ahttp%3A//disastermath.com/</text>
         <verticalScrollbar>true</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="137" y="108" w="186" h="35" measuredW="168" measuredH="41" zOrder="1" locked="false" isInGroup="-1">
-      <controlProperties>
-        <bold>false</bold>
-        <size>28</size>
-        <text>disastermath</text>
-      </controlProperties>
-    </control>
-    <control controlID="3" controlTypeID="com.balsamiq.mockups::HRule" x="137" y="161" w="792" h="-1" measuredW="100" measuredH="5" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::HRule" x="135" y="214" w="792" h="-1" measuredW="100" measuredH="5" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.25</backgroundAlpha>
       </controlProperties>
     </control>
-    <control controlID="18" controlTypeID="com.balsamiq.mockups::LinkBar" x="798" y="113" w="-1" h="-1" measuredW="131" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::LinkBar" x="601" y="145" w="-1" h="-1" measuredW="326" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <size>16</size>
-        <text>Explore%2C%20About</text>
+        <text>About%2C%20Case%20Study%2C%20Data%2C%20Methodology</text>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Image" x="135" y="119" w="185" h="80" measuredW="77" measuredH="79" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::Image" x="135" y="267" w="792" h="323" measuredW="77" measuredH="79" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::Image" x="135" y="833" w="186" h="147" measuredW="77" measuredH="79" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Image" x="438" y="832" w="186" h="147" measuredW="77" measuredH="79" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Image" x="741" y="832" w="186" h="147" measuredW="77" measuredH="79" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Link" x="155" y="1029" w="-1" h="-1" measuredW="144" measuredH="37" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Methodology</text>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Link" x="805" y="1030" w="-1" h="-1" measuredW="57" measuredH="37" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Data</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Link" x="467" y="1029" w="-1" h="-1" measuredW="128" measuredH="37" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Case%20Study</text>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="638" w="788" h="125" measuredW="200" measuredH="140" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Lorem%20ipsum%20dolor%20%5Bsit%20amet%5D%2C%20consectetur%20adipisicing%20elit%2C%20sed%20do%20eiusmod%20tempor%20incididunt%20%5But%20labore%20et%5D%20dolore%20magna%20aliqua.</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::Image" x="492" y="1185" w="78" h="63" measuredW="77" measuredH="79" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>CfA</text>
       </controlProperties>
     </control>
   </controls>

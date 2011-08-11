@@ -1,5 +1,6 @@
 @green: #8fc829;
-@color: #db7019;
+@color: #5b282a;
+@dark: #0c0505;
 
 /* Link Color and Styles */
 a, a:active, a:visited { color: @color; }
@@ -13,42 +14,40 @@ a:hover { text-decoration: underline; }
 /* I never find myself really using list-style. */
 ul{ list-style: none; }
 
-body{
-    color: #444;
-}
+/* Default color for the site */
+body{ color: @dark; }
 
 header{
     display:block;
-    margin-bottom: 75px;
+    margin-bottom: 35px;
     ul{
-        border-bottom:1px solid #eee;
         margin:0 auto;
         padding:10px 0;
         width:90%;
     }
     li{
         float: right;
-        padding-top: 24px;
+        padding-top: 38px;
     }
     li.float_left{
         float:left;
         padding-top: 10px;
         a{
-          background: url('/static/img/disastermath.png') no-repeat center center;
-          height: 33px;
-          width: 235px;
+          background: url('/static/img/disastermath_small_red.png') no-repeat center center;
+          height: 80px;
+          width: 200px;
         }
     }
     a{
         display:block;
         font-size:16px;
         padding:10px 12px;
-        width:75px;
+        width:100px;
         text-align:center;
         text-decoration:none;
     }
     a, a:visited{
-        color: #444;
+        color: @dark;
     }
     a:hover{
         background: @color;
@@ -60,30 +59,23 @@ header{
     }
 }
 
-.left h2, .right form{ margin-top: 20px; }
-.left{
-    background: url('/static/img/bracket.png') right top no-repeat;
-    float: left;
-    min-height:300px;
-    padding: 0 5%;
-    width: 50%;
-    h2{
-        font-size: 50px;
-        margin-bottom: 40px;
-        text-align: center;
-        text-transform: uppercase;
-    }
-    p{
-        font-size: 18px;
-        line-height:1.5;
-        padding: 0 10%;
-    }
+#main{
+    margin: 0 auto;
+    width: 90%;
 }
-.right{
-    background: url('/static/img/company.png') no-repeat center center;
-    min-height: 300px;
-    float: right;
-    width: 40%;
+
+footer{
+    margin: 125px 0 0;
+    .cfa{
+        background: url('/static/img/cfa_dark.png') no-repeat center center;
+        height: 34px;
+        margin: 0 auto;
+        padding: 20px;
+        width: 90px;
+    }
+    .cfa:hover{
+        background-image: url('/static/img/cfa_light.png');
+    }
 }
 
 .flask_cloud{
@@ -97,21 +89,17 @@ header{
     background: url('/static/img/flaskcloud_hover.png') no-repeat center center;
 }
 
-/* iPad [portrait + landscape] */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
-}
+/* iPad [portrait + landscape] */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) { }
 
 /* iPad [portrait only] */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+and (orientation: portrait) { }
 
 /* iPad [landscape only] */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
-and (orientation: landscape) {
-}
+and (orientation: landscape) { }
 
 /* iPhone [portrait + landscape] */
-@media only screen and (max-device-width: 480px) {
-
-}
+@media only screen and (max-device-width: 480px) { }

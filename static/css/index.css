@@ -1,9 +1,6 @@
-#main{margin:0 auto;width:90%;}
-h1{font-size:20px;font-weight:normal;margin:0 0 15px 14%;text-align:center;}
-.controls{height:64px;margin:0 auto 75px;width:75%;}.controls .play{background:url('/static/img/play_button.png') no-repeat left center;display:block;float:left;height:64px;width:14%;}
-.controls .timeline{float:right;margin:24px auto 0;width:85%;}
-#chart{float:left;width:60%;}
-.countries{float:right;height:300px;width:30%;}.countries li{height:20px;padding:5px 0;width:100%;}
-.countries li.odd{background:#ddd;}
-h2{font-size:16px;font-weight:normal;text-align:center;padding:0 0 10px;text-transform:uppercase;}
-iframe{width:100%;}
+.hurricane_bg{background:url('/static/img/hurricane_border.png') no-repeat center center;height:575px;margin:0 auto 80px;width:1024px;}
+.large{font-size:20px;line-height:1.7;margin:40px auto;text-align:justify;width:75%;}
+.drought_bg{background:url('/static/img/drought_red.png') no-repeat center center;height:575px;margin:0 auto;width:1024px;}
+.lightning_bg{background:url('/static/img/lightning_red.png') no-repeat center center;height:575px;margin:0 auto;width:1024px;}
+.bridge_bg{background:url('/static/img/bridge_red.png') no-repeat center center;height:575px;margin:0 auto;width:1024px;}
+.cloud_bg{background:url('/static/img/cloud_bg.png') no-repeat center center;height:575px;margin:0 auto;width:1024px;}

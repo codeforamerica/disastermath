@@ -7,12 +7,12 @@
 <head>
   <meta charset="utf-8">
 
-  <title>{% block title %}yoursite.com{% endblock %}</title>
+  <title>{% block title %}disastermath.com{% endblock %}</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
   <!--Since I develop in the 1000px range, that's what the width should be-->
-  <meta name="viewport" content="width=1000">
+  <meta name="viewport" content="width=1100">
 
 
   <!-- CSS: implied media="all" -->
@@ -38,10 +38,16 @@
             <a href="/" class="ir">disastermath.com</a>
         </li>
         <li>
-            <a href="{{ url_for('views.about') }}">About</a>
+            <a href="{{ url_for('views.methodology') }}">Methodology</a>
         </li>
         <li>
-            <a href="{{ url_for('views.explore') }}">Explore</a>
+            <a href="{{ url_for('views.data') }}">Data</a>
+        </li>
+        <li>
+            <a href="{{ url_for('views.research') }}">Research</a>
+        </li>
+        <li>
+            <a href="{{ url_for('views.about') }}">About</a>
         </li>
     </ul>
     </header>
@@ -49,7 +55,7 @@
       {% block main %}{% endblock %}
     </div>
     <footer>
-      {% block footer %}{% endblock %}
+        <a href="http://codeforamerica.org" class="ir cfa">Code for America</a>
     </footer>
   </div> <!--! end of #container -->
 

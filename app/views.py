@@ -23,21 +23,22 @@ def about():
     return render_template('about.html')
 
 
-@views.route('/explore/')
-def explore():
-    """Explore the different countries and disasters available."""
-    form = ExploreDataForm()
-    return render_template('explore.html', form=form)
+@views.route('/research/')
+def research():
+    """Explore the US disaster case study."""
+    return render_template('research.html')
 
 
-@views.route('/explore/data')
-def explore_data():
-    """This function returns JSON data from GET requests for data."""
-    year = request.args['year']
-    country = request.args['country']
-    disaster_type = request.args['disaster_type']
-    return "ohai"
+@views.route('/data/')
+def data():
+    """Find which dataset you want to download."""
+    return render_template('data.html')
 
+
+@views.route('/methodology/')
+def methodology():
+    """Overview of methodology used."""
+    return render_template('methodology.html')
 
 # The functions below should be applicable to all Flask apps.
 

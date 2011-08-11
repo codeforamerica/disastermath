@@ -1,32 +1,20 @@
 {% extends "base.html" %}
 
 {% block css %}
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" href="/static/css/index.css">
 {% endblock %}
 
 
 {% block js %}
-<!--JavaScript for map-->
-<script src="/static/js/disastermath.js"></script>
 {% endblock %}
 
 
 {% block main %}
-<h1>Top 5 Natural Disasters Per Year</h1>
-<div class="controls">
-  <a href="#" class="play clearfix"></a>
-  <div class="timeline"></div>
-</div>
-<div class="clearfix visualization">
-  <div id="chart"></div>
-  <ul class="countries">
-    <h2>List of Countries</h2>
-    <li class="empty odd"></li>
-    <li class="empty even"></li>
-    <li class="empty odd"></li>
-    <li class="empty even"></li>
-    <li class="empty odd"></li>
-  </ul>
-</div>
+<div class="hurricane_bg"></div>
+<p class="large">This project has two purposes. The first: create an <a
+  href="{{ url_for('views.data') }}">open-source disaster dataset</a> that
+contains data on all the common elements of disasters. The second: <a
+  href="{{ url_for('views.research') }}">quantify how
+  well cities and countries have coped with disasters</a> relative to similar
+disasters in similarly developed countries.</p>
 {% endblock %}

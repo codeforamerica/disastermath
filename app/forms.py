@@ -6,19 +6,14 @@ Flask-WTF Documentation:  http://packages.python.org/Flask-WTF/
 Forms for your application can be stored in this file.
 """
 
-from flaskext.wtf import Form, SubmitField, TextField, Required, Email
+from flaskext.wtf import Form, SubmitField, TextField, SelectField
 
-class ExampleForm(Form):
-    """Just a simple example form."""
-    name = TextField('Name', validators=[Required()])
-    email = TextField('Email', validators=[Email()])
-    location = TextField('Location')
-    submit = SubmitField('Submit')
+from select_fields import YEAR_LIST, COUNTRY_CODES, DISASTER_TYPES
 
 
 class ExploreDataForm(Form):
     """A form for requesting data to explore disasters in countries."""
-    year = TextField('Year')
-    country = TextField('Country')
-    disaster_type = TextField('Disaster Type')
-    pass
+    year = SelectField('Year', choices=YEAR_LIST)
+    country = SelectField('Country', choices=COUNTRY_CODES)
+    disaster_type = SelectField('Disaster Type', choices=DISASTER_TYPES)
+    submit = SubmitField('Submit')

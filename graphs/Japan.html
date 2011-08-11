@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <title>Disaster Math</title> 
+    <link type="text/css" rel="stylesheet" href="css/styles.css"/> 
+    <script type="text/javascript" src="js/protovis.js"></script> 
+    <script type="text/javascript" src="js/Japan.js"></script> 
+    <style type="text/css"> 
+ 
+#fig {
+  width: 100%;
+  height: 100%;
+}
+ 
+    </style> 
+  </head> 
+  <body><div id="center"><div id="fig"> 
+    <script type="text/javascript+protovis"> 
+ 
+/* Sizing and scales. */
+var w = 2000,
+    h = 500,
+    x = pv.Scale.linear(0, 310000).range(0, w),
+    y = pv.Scale.linear(4, 9.1).range(0, h),
+    c = pv.Scale.log(1, 2000).range("orange", "brown");
+ 
+/* The root panel. */
+var vis = new pv.Panel()
+    .width(w)
+    .height(h)
+    .bottom(20)
+    .left(20)
+    .right(10)
+    .top(100);
+ 
+/* Y-axis and ticks. */
+vis.add(pv.Rule)
+    .data(y.ticks())
+    .bottom(y)
+    .strokeStyle(function(d) d ? "#eee" : "#000")
+  .anchor("left").add(pv.Label)
+    // .visible(function(d) d > 0 && d < 1)
+    .text(y.tickFormat);
+ 
+/* X-axis and ticks. */
+vis.add(pv.Rule)
+    .data(x.ticks())
+    .left(x)
+    .strokeStyle(function(d) d ? "#eee" : "#000")
+  .anchor("bottom").add(pv.Label)
+    .visible(function(d) d > 0 && d < 310000)
+    .text(x.tickFormat);
+ 
+/* The dot plot! */
+vis.add(pv.Panel)
+ .data(data)
+  .add(pv.Dot)
+    .left(function(d) (x(d.Damages)))
+    .bottom(function(d) (y(d.Severity)))
+    .strokeStyle(function(d) c(d.Affected))
+    .fillStyle(function() this.strokeStyle().alpha(.2))
+    .size(function(d) Math.sqrt(d.Affected)*2)
+    .title(function(d) d.country + " " + d.Affected + " People Affected");
+
+vis.add(pv.Panel)
+    .data(data)
+  .add(pv.Dot)
+    .left(function(d) (x(d.Damages)))
+    .bottom(function(d) (y(d.Severity)))
+    .strokeStyle(function(d) c(d.Deaths))
+    .fillStyle(function() this.strokeStyle().alpha(.2))
+    .size(function(d) Math.sqrt(d.Deaths)*2)
+    .title(function(d) d.country + " " + d.Deaths + " Deaths");
+
+
+
+ 
+vis.render();
+ 
+    </script> 
+  </div></div></body> 
+</html>

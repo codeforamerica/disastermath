@@ -19,11 +19,11 @@
     <script type="text/javascript+protovis"> 
  
 /* Sizing and scales. */
-var w = 600,
+var w = 1000,
     h = 400,
     x = pv.Scale.linear(0, 140000).range(0, w),
     y = pv.Scale.linear(4, 7).range(0, h),
-    c = pv.Scale.log(1, 2000).range("#682121", "#BC9E82");
+    c = pv.Scale.log(1, 2000).range("orange", "brown");
  
 /* The root panel. */
 var vis = new pv.Panel()
@@ -48,7 +48,7 @@ vis.add(pv.Rule)
     .left(x)
     .strokeStyle(function(d) d ? "#eee" : "#000")
   .anchor("bottom").add(pv.Label)
-    .visible(function(d) d > 0 && d < 140000)
+    // .visible(function(d) d > 0 && d < 140000)
     .text(x.tickFormat);
  
 /* The dot plot! */
@@ -58,7 +58,7 @@ vis.add(pv.Panel)
     .left(function(d) x(d.Damages))
     .bottom(function(d) y(d.Severity))
     .strokeStyle(function(d) c(d.Affected))
-    .fillStyle(function() this.strokeStyle().alpha(.7))
+    .fillStyle(function() this.strokeStyle().alpha(.2))
     .size(function(d) Math.sqrt(d.Affected)*2)
     .title(function(d) "Storm Name: " + d.Name + "; " + "Location: " + d.Loc + "; Affected: " + d.Affected);
 

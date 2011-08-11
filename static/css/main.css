@@ -12,7 +12,6 @@ header a,header a:visited{color:#0c0505;}
 header a:hover{background:#5b282a;color:white;text-decoration:none;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;}
 #main{margin:0 auto;width:90%;}
 footer{margin:125px 0 0;}footer .cfa{background:url('/static/img/cfa_dark.png') no-repeat center center;height:34px;margin:0 auto;padding:20px;width:90px;}
-footer .cfa:hover{background-image:url('/static/img/cfa_light.png');}
 .flask_cloud{background:url('/static/img/flaskcloud.png') no-repeat center center;display:block;height:300px;margin:0 auto;width:460px;}
 .flask_cloud:hover{background:url('/static/img/flaskcloud_hover.png') no-repeat center center;}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){}@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)

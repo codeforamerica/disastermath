@@ -19,10 +19,10 @@
     <script type="text/javascript+protovis"> 
  
 /* Sizing and scales. */
-var w = 600,
+var w = 800,
     h = 400,
     x = pv.Scale.linear(0, 5).range(0, w),
-    y = pv.Scale.linear(5, 10).range(0, h),
+    y = pv.Scale.linear(0, 100).range(0, h),
     c = pv.Scale.log(1, 2000).range("orange", "brown");
  
 /* The root panel. */
@@ -61,7 +61,7 @@ vis.add(pv.Panel)
     .strokeStyle(function(d) c(d.Affected))
     .fillStyle(function() this.strokeStyle().alpha(.2))
     .size(function(d) Math.sqrt(d.Affected)*2)
-    .title(function(d) d.country + " " + d.Affected + " People Affected");
+    .title(function(d) d.country + "; " + " People Affected: " + d.Affected);
 
 vis.add(pv.Panel)
     .data(data)
@@ -71,7 +71,7 @@ vis.add(pv.Panel)
     .strokeStyle(function(d) c(d.Deaths))
     .fillStyle(function() this.strokeStyle().alpha(.2))
     .size(function(d) Math.sqrt(d.Deaths)*2)
-    .title(function(d) "country" + d.country + " " + d.Deaths + " Deaths");
+    .title(function(d) d.country + "; " + " Deaths: " + d.Deaths);
 
 vis.render();
  

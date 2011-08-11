@@ -61,7 +61,7 @@ vis.add(pv.Panel)
     .strokeStyle(function(d) c(d.Affected))
     .fillStyle(function() this.strokeStyle().alpha(.2))
     .size(function(d) Math.sqrt(d.Affected)*2)
-    .title(function(d) d.country + " " + d.Affected + " People Affected");
+    .title(function(d) d.country + ";" + " Severity:" + d.Severity + " " + " People Affected: " + d.Affected);
 
 vis.add(pv.Panel)
     .data(data)
@@ -71,7 +71,11 @@ vis.add(pv.Panel)
     .strokeStyle(function(d) c(d.Deaths))
     .fillStyle(function() this.strokeStyle().alpha(.2))
     .size(function(d) Math.sqrt(d.Deaths)*2)
-    .title(function(d) "country" + d.country + " " + d.Deaths + " Deaths");
+    .title(function(d) d.country + ";" + "Severity:" + d.Severity + " " + " Deaths:" + d.Deaths);
+
+
+
+
 
 vis.render();
  

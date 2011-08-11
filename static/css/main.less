@@ -1,10 +1,10 @@
 @green: #8fc829;
-@color: #5b282a;
+@color: #682121;
 @dark: #0c0505;
 
 /* Link Color and Styles */
 a, a:active, a:visited { color: @color; }
-a:hover { text-decoration: underline; }
+a:hover { background: @color; color: #fff; text-decoration: none; }
 
 
 /* Custom highlight */
@@ -16,6 +16,11 @@ ul{ list-style: none; }
 
 /* Default color for the site */
 body{ color: @dark; }
+body:after{
+    content: url('/static/img/hurricane_border.png') url('/static/img/drought_red.png')
+             url('/static/img/cloud_bg.png') url('/static/img/lightning_red.png');
+    display: none;
+}
 
 header{
     display:block;

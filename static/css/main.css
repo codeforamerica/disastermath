@@ -1,15 +1,16 @@
-a,a:active,a:visited{color:#5b282a;}
-a:hover{text-decoration:underline;}
-::-moz-selection{background:#5b282a;color:#fff;text-shadow:none;}
-::selection{background:#5b282a;color:#fff;text-shadow:none;}
+a,a:active,a:visited{color:#682121;}
+a:hover{background:#682121;color:#fff;text-decoration:none;}
+::-moz-selection{background:#682121;color:#fff;text-shadow:none;}
+::selection{background:#682121;color:#fff;text-shadow:none;}
 ul{list-style:none;}
 body{color:#0c0505;}
+body:after{content:url('/static/img/hurricane_border.png') url('/static/img/drought_red.png') url('/static/img/cloud_bg.png') url('/static/img/lightning_red.png');display:none;}
 header{display:block;margin-bottom:35px;}header ul{margin:0 auto;padding:10px 0;width:90%;}
 header li{float:right;padding-top:38px;}
 header li.float_left{float:left;padding-top:10px;}header li.float_left a{background:url('/static/img/disastermath_small_red.png') no-repeat center center;height:80px;width:200px;}
 header a{display:block;font-size:16px;padding:10px 12px;width:100px;text-align:center;text-decoration:none;}
 header a,header a:visited{color:#0c0505;}
-header a:hover{background:#5b282a;color:white;text-decoration:none;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;}
+header a:hover{background:#682121;color:white;text-decoration:none;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;}
 #main{margin:0 auto;width:90%;}
 footer{margin:125px 0 0;}footer .cfa{background:url('/static/img/cfa_dark.png') no-repeat center center;height:34px;margin:0 auto;padding:20px;width:90px;}
 .flask_cloud{background:url('/static/img/flaskcloud.png') no-repeat center center;display:block;height:300px;margin:0 auto;width:460px;}
